@@ -3,9 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>first</title>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<h2>게시판 목록</h2>
