@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="amugeona">
+	<select id="selectTypeFirstList" parameterType="hashmap" resultType="hashmap"> 
+		SELECT A.TYPE_CD
+		     , B.CODE_NAME
+		     , A.TYPE_CATEGORY
+		     , A.PARENT_CATEGORY 
+		  FROM TB_CATEGORYMAP A
+		     , TB_COMMONCD B 
+		 WHERE A.TYPE_CD = B.CODE_ID 
+		   AND A.PARENT_CATEGORY = 'CT001'
+	  ORDER BY A.IDX ASC
+	</select>
+	
+	<select id="selectTypeList" parameterType="hashmap" resultType="hashmap"> 
+		SELECT A.TYPE_CD
+		     , B.CODE_NAME
+		     , A.TYPE_CATEGORY
+		     , A.PARENT_CATEGORY 
+		  FROM TB_CATEGORYMAP A
+		     , TB_COMMONCD B 
+		 WHERE A.TYPE_CD = B.CODE_ID 
+		   AND A.PARENT_CATEGORY = #{category}
+	  ORDER BY A.IDX ASC
+	</select>
+
+</mapper>
+

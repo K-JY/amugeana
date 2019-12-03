@@ -1,4 +1,4 @@
-package first.amugeana.dao;
+package first.amugeona.dao;
 
 import java.util.List;
 import java.util.Map;
@@ -7,15 +7,15 @@ import org.springframework.stereotype.Repository;
 
 import first.common.AbstractDAO;
 
-@Repository("amugeanaDAO")
-public class AmugeanaDAO extends AbstractDAO{
+@Repository("amugeonaDAO")
+public class AmugeonaDAO extends AbstractDAO{
 	@SuppressWarnings("unchecked")
 	public List<Map<String, Object>> selectTypeFirstList(Map<String, Object> map) throws Exception {
-		return (List<Map<String, Object>>) selectList("amugeana.selectTypeFirstList", map);
+		return (List<Map<String, Object>>) selectList("amugeona.selectTypeFirstList", map);
 	}
 	
 	@SuppressWarnings("unchecked")
 	public List<Map<String, Object>> selectTypeList(Map<String, Object> map) throws Exception {
-		return (List<Map<String, Object>>) selectList("amugeana.selectTypeList", map);
+		return (List<Map<String, Object>>) selectList("amugeona.selectTypeList", map);
 	}
 }
