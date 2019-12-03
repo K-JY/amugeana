@@ -2499,6 +2499,8 @@ br.clear {
 
 #type-contents{
 	margin: 2em 0 0 0;
+	height: 320px;
+    overflow: scroll;
 }
 
 .typeBtn{
@@ -2529,7 +2531,7 @@ br.clear {
 }
 
 #btn-list{
-	margin-top: 100px;
+	margin-top: 40px;
 }
 
 #nextBtn{

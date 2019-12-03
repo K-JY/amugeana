@@ -26,16 +26,36 @@ public class AmugeonaController {
 	@Resource(name = "amugeonaService")
 	private AmugeonaService amugeonaService;
 
-	@RequestMapping(value = "/amugeana/typeSelect.do")
+	@RequestMapping(value = "/amugeona/typeSelect.do")
 	public ModelAndView openSampleBoardList(Map<String, Object> commandMap) throws Exception {
-		ModelAndView mv = new ModelAndView("/amugeana/typeSelect");
+		ModelAndView mv = new ModelAndView("/amugeona/typeSelect");
 		List<Map<String, Object>> list = amugeonaService.selectTypeFirstList(commandMap);
 		mv.addObject("list", list);
 
 		return mv;
 	}
+	
+	@RequestMapping(value = "/amugeona/foodSelect.do")
+	public ModelAndView foodSelect(HttpServletRequest request) throws Exception {
+		ModelAndView mv = new ModelAndView("/amugeona/foodSelect");
+		String typeData = request.getParameter("typeData");
+		String stepData = request.getParameter("stepData");
+		
+		String[] typeDataList = typeData.split("|");
+		String[] stepDataList = stepData.split("|");
+		
+		Map<String, Object> typeMap = new HashMap<String, Object>();
+		for(int i = 0;i<typeDataList.length-1;i++) {
+			typeMap.put(stepDataList[i], typeDataList[i]);
+		}
+		
+		List<Map<String, Object>> list = amugeonaService.selectFoodList(typeMap);
+		mv.addObject("list", list);
 
-	@RequestMapping(value = "/amugeana/ajaxTypeList.do", method = RequestMethod.POST)
+		return mv;
+	}
+
+	@RequestMapping(value = "/amugeona/ajaxTypeList.do", method = RequestMethod.POST)
 	@ResponseBody
 	public Map<String, Object> testJson( @RequestBody Map<Object, Object> paramMap, ModelMap model) throws Exception {
  

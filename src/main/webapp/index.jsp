@@ -16,14 +16,14 @@
 	</head>
 	<body class="is-preload">
 		<section id="lnb">
-			<h2><a>AMUGEANA</a></h2>
+			<h2><a>AMUGEONA</a></h2>
 		</section>
 		<!-- Banner -->
 			<section id="middle">
 				<p id="content1">오늘 저녁 무엇을 먹을지 고민이라면.</p>
 				<p>내 마음에 딱 드는 메뉴를 골라드립니다..</p>
 				<footer>
-					<a href="/amugeana/typeSelect.do" class="button style2 scrolly">메뉴보러가기</a>
+					<a href="/amugeona/typeSelect.do" class="button style2 scrolly">메뉴보러가기</a>
 				</footer>
 			</section>
 		<section id="footer">
@@ -37,7 +37,7 @@
 			</ul> -->
 			<div class="copyright">
 				<ul class="menu">
-					<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="/">AMUGEANA</a></li>
+					<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="/">AMUGEONA</a></li>
 				</ul>
 			</div>
 		</section>
